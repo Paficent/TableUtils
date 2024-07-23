@@ -36,7 +36,68 @@ function Table.isArray<V>(tbl: Array<V>): boolean
 	end
 
 	return true
-end  
+end
+
+function Table.length<V>(array: Array<V>): number
+	if not Table.isArray(array) then
+		error("Table.reverse called on non-array")
+	end
+
+	return #array
+end
+
+function Table.reverse<V>(array: Array<V>): Array<V>
+	if not Table.isArray(array) then
+		error("Table.reverse called on non-array")
+	end
+
+	local Num = Table.length(array)
+	local i = 1
+
+	while i < Num do
+		array[i], array[Num] = array[Num],array[i]
+		i = i + 1
+		Num = Num - 1
+	end
+
+	return array
+end
+
+function Table.indexOf<V>(array: Array<V>, value: V): number
+	if not Table.isArray(array) then
+		error("Table.reverse called on non-array")
+	end
+	
+	for Index, Val in ipairs(array) do
+		if Val == value then
+			return Index
+		end
+	end
+
+	return -1
+end
+
+function Table.map<V, R>(array: Array<V>, callback: mapCallbackFunc<V, R>): Array<R>
+	if not Table.isArray(array) then
+		error(string.format("Table.map called on non-array"))
+	end
+
+	if typeof(callback) ~= "function" then
+		error("Invalid usage: 'callback' is not a function")
+	end
+  
+	local newTable = {}
+
+	for i, value in array do
+		local mappedValue: R = callback(i, value)
+  
+		if mappedValue ~= nil then
+			table.insert(newTable, mappedValue)
+		end
+	end
+  
+	return newTable
+end
 
 function Table.mergei<V>(...: Array<V>): Array <V>
 	local Arrays = { ... }
@@ -51,58 +112,6 @@ function Table.mergei<V>(...: Array<V>): Array <V>
 	end
 
 	return NewArray
-end
-
-function Table.reverse<V>(tbl: Array<V>): Array<V>
-	if not Table.isArray(tbl) then
-		error("Table.reverse called on non-array")
-	end
-
-	local Num = #tbl
-	local i = 1
-
-	while i < Num do
-		tbl[i], tbl[Num] = tbl[Num], tbl[i]
-		i = i + 1
-		Num = Num - 1
-	end
-
-	return tbl
-end
-
-function Table.indexOf<V>(tbl: Array<V>, value: V): number
-	if not Table.isArray(tbl) then
-		error("Table.reverse called on non-array")
-	end
-
-	for Index, Val in ipairs(tbl) do
-		if Val == value then
-			return Index
-		end
-	end
-
-	return 0
-end
-
-function Table.map<V, R>(array: Array<V>, callback: mapCallbackFunc<V, R>): Array<R>
-	if not Table.isArray(array) then
-		error(string.format("Table.map called on non-array"))
-	end
-
-	if typeof(callback) ~= "function" then
-		error("Invalid usage: 'callback' is not a function")
-	end
-  
-	local newTable = {}
-	for i, value in array do
-		local mappedValue: R = callback(i, value)
-  
-		if mappedValue ~= nil then
-			table.insert(newTable, mappedValue)
-		end
-	end
-  
-	return newTable
 end
 
 
@@ -131,11 +140,15 @@ function Table.merge<K,V>(...: Table<K, V>): Table<K, V>
 	return NewTable
 end
 
-function Table.filter<K, V>(tbl: Table<K, V>, callbackFunction: callbackFunc<K, V>): Array<V>
+function Table.filter<K, V>(tbl: Table<K, V>, callback: callbackFunc<K, V>): Array<V>
+	if typeof(callback) ~= "function" then
+		error("Invalid usage: 'callback' is not a function")
+	end
+
 	local NewTable = {}
 
 	for Key, Value in next, tbl do
-		if callbackFunction(Key, Value) then
+		if callback(Key, Value) then
 			NewTable[#NewTable + 1] = Value
 		end
 	end
