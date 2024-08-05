@@ -5,11 +5,8 @@
 
 local TableUtil = {}
 
-local types = require(script.types)
-local modules = require(script.modules)
-
-TableUtil.Types = types
-TableUtil.Array = modules.Array
-TableUtil.Table = modules.Table
+TableUtil.Types = require(script.types)
+TableUtil.Array = require(script.Array)
+TableUtil.Table = require(script.Array)
 
 return TableUtil

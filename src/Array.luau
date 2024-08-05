@@ -4,7 +4,7 @@
 --// Paficent \\
 
 local Array = {}
-local Types = require(script.Parent.Parent.types)
+local Types = require(script.Parent.types)
 
 --[=[
     Checks if the inputted table is an array.

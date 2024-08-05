@@ -1,1 +1,0 @@
--- The current Table.dump module isn't strictly typed, will need to rewrite

@@ -1,8 +1,5 @@
-# Build files etc
-/*.rbxm
-/*.rbxmx
-/*.rbxl
-/*.rbxlx
+# Build
+/build
 
 # Misc
 /sourcemap.json
