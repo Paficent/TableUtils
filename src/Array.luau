@@ -83,6 +83,57 @@ function Array.reverse<V>(array: Types.Array<V>): Types.Array<V>
 end
 
 --[=[
+    Removes duplicate values from an array.
+
+    @param array Array<V> -- The inputted array
+    @return Array<V> -- A new array with duplicate values removed
+]=]
+function Array.unique<V>(array: Types.Array<V>): Types.Array<V>
+    local result: Types.Array<V> = {}
+    local seen: Types.Table<V, boolean> = {}
+
+    for _, value in ipairs(array) do
+        if not seen[value] then
+            seen[value] = true
+            table.insert(result, value)
+        end
+    end
+
+    return result
+end
+
+--[=[
+    Splits an array into chunks of a specified size.
+
+    @param array Array<V> -- The inputted array
+    @param size number -- The size of each chunk
+    @return Array<Array<V>> -- An array containing chunks of the original array
+]=]
+function Array.chunk<V>(array: Types.Array<V>, size: number): Types.Array<Types.Array<V>>
+    if size <= 0 then
+        error("Chunk size must be greater than 0")
+    end
+
+    local result: Types.Array<Types.Array<V>> = {}
+    local chunk: Types.Array<V> = {}
+
+    for i, value in ipairs(array) do
+        if (i - 1) % size == 0 and i > 1 then
+            table.insert(result, chunk)
+            chunk = {}
+        end
+        table.insert(chunk, value)
+    end
+
+    if #chunk > 0 then
+        table.insert(result, chunk)
+    end
+
+    return result
+end
+
+
+--[=[
     Merges multiple arrays into one.
 
     @param ... Array<V> -- Arrays to be merged
