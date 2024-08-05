@@ -1,12 +1,4 @@
---!strict
---!native
---!optimize 2
---// Paficent \\
-
-local TableUtil = {}
-
-TableUtil.Array = require(script.Array)
-TableUtil.Table = require(script.Table)
+local sharedTypes = {}
 
 export type Array<T> = { T }
 export type Table<K, V> = { [K]: V }
@@ -15,4 +7,4 @@ export type predicateFunc<K, V> = (key: K, value: V) -> boolean
 export type mapCallbackFunc<T, U> = (index: number, value: T) -> U
 export type reduceCallbackFunc<T, U> = (accumulator: U, value: T, index: number) -> U
 
-return TableUtil
+return sharedTypes

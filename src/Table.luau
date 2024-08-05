@@ -4,7 +4,7 @@
 --// Paficent \\
 
 local Table = {}
-local Types = require(script.Parent.types)
+local Types = require(script.Parent.util.types)
 
 
 -- // Recursive Functions
