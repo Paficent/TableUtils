@@ -21,18 +21,18 @@
 
 **TableUtils** is a robust and strictly typed LuaU library with functions specifically designed for manipulating LuaU tables
 
-### Documentation
-Documentation for the module can be found [here](paficent.github.io/TableUtils/)
+### Documentation <a name="docs></a>
+Documentation for this project can be found [here](https://paficent.github.io/TableUtils/)
 
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-### Prerequisites
+### Prerequisites <a name="prerequisites"></a>
 
 In order to run this project you need [aftman](https://github.com/LPGhatguy/aftman/) and [wally](https://github.com/UpliftGames/wally).
 
 
-### Install
+### Install <a name="install"></a>
 
 Install this project with wally:
 
@@ -41,7 +41,7 @@ Install this project with wally:
 ```
 
 
-### Usage
+### Usage <a name="usage"></a>
 Usage examples for each function can be found in the Moonwave generated Documentation
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
