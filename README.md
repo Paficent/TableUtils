@@ -1,38 +1,11 @@
-<a name="readme-top"></a>
+## 💻 Getting Started
 
-<!-- TABLE OF CONTENTS -->
-
-# 📗 Table of Contents
-
-- [📖 About the Project](#about-project)
-  - [Documentation](#docs)
-- [💻 Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Setup](#setup)
-  - [Install](#install)
-  - [Usage](#usage)
-- [🤝 Contributing](#contributing)
-- [📝 License](#license)
-- [⭐️ Support the project](#support)
-
-<!-- PROJECT DESCRIPTION -->
-
-# 📖 TableUtils <a name="about-project"></a>
-
-**TableUtils** is a robust and strictly typed LuaU library with functions specifically designed for manipulating LuaU tables
-
-### Documentation <a name="docs></a>
-Documentation for this project can be found [here](https://paficent.github.io/TableUtils/)
-
-
-## 💻 Getting Started <a name="getting-started"></a>
-
-### Prerequisites <a name="prerequisites"></a>
+### Prerequisites
 
 In order to run this project you need [aftman](https://github.com/LPGhatguy/aftman/) and [wally](https://github.com/UpliftGames/wally).
 
 
-### Install <a name="install"></a>
+### Install
 
 Install this project with wally:
 
@@ -41,37 +14,31 @@ Install this project with wally:
 ```
 
 
-### Usage <a name="usage"></a>
-Usage examples for each function can be found in the Moonwave generated documentation.
+### Usage
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+Usage examples for each function can be found in the Moonwave generated documentation.
 
 
 <!-- CONTRIBUTING -->
 
-## 🤝 Contributing <a name="contributing"></a>
+## 🤝 Contributing 
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/Paficent/TableUtils/issues).
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- SUPPORT -->
 
-## ⭐️ Support the project <a name="support"></a>
+## ⭐️ Support the project
 
 > Write a message to encourage readers to support your project
 
 If you like this project...
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 <!-- LICENSE -->
 
-## 📝 License <a name="license"></a>
+## 📝 License
 
-This project is licensed with the [MIT](./LICENSE) license.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+This project is licensed with the [MIT](https://github.com/Paficent/TableUtils/blob/main/LICENSE) license.
