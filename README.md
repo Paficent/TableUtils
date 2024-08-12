@@ -37,7 +37,7 @@ This project is licensed with the [MIT](https://github.com/Paficent/TableUtils/b
 
 <!-- SUPPORT -->
 
-## ⭐️ Support the developer
+## ⭐️ Support
 
 I put a lot of time and effort into these open source projects for absolutely free! However, if you've found any sort of use my projects and would like to help a broke 
-student, consider supporting me [here](https://buymeacoffee.com/paficent)
+student, consider supporting me [here](https://buymeacoffee.com/paficent)!
