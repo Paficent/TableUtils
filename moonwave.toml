@@ -12,7 +12,7 @@ tagline = "A robust and strictly typed LuaU library with functions specifically 
 
 [home]
 enabled = true
-includeReadme = true
+includeReadme = false
 
 [footer]
 style = "dark"
