@@ -30,11 +30,9 @@ Feel free to check the [issues page](https://github.com/Paficent/TableUtils/issu
 
 <!-- SUPPORT -->
 
-## ⭐️ Support the project
+## ⭐️ Support the developer
 
-> Write a message to encourage readers to support your project
-
-If you like this project...
+If you'd like to support my work, you can donate [here](https://buymeacoffee.com/paficent)
 
 
 <!-- LICENSE -->
