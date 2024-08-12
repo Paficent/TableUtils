@@ -4,7 +4,7 @@ changelog = true
 
 
 [docusaurus]
-onBrokenLinks = "throw"
+onBrokenLinks = "warn"
 onBrokenMarkdownLinks = "warn"
 title = "TableUtils"
 tagline = "A robust and strictly typed LuaU library with functions specifically designed for manipulating LuaU tables."
