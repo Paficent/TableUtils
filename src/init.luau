@@ -1,6 +1,6 @@
 --!strict
 --!native
---// Paficent \\
+--// Made By Paficent \\
 
 --[=[
     @class TableUtils
