@@ -5,7 +5,7 @@
 --[=[
     @class TableUtils
 
-    This is my first class.
+    A robust and strictly typed Luau library with functions specifically designed for manipulating tables.
 ]=]
 
 --[=[
