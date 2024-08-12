@@ -28,15 +28,16 @@ Contributions, issues, and feature requests are welcome!
 Feel free to check the [issues page](https://github.com/Paficent/TableUtils/issues).
 
 
-<!-- SUPPORT -->
-
-## ⭐️ Support the developer
-
-If you'd like to support my work, you can donate [here](https://buymeacoffee.com/paficent)
-
-
 <!-- LICENSE -->
 
 ## 📝 License
 
 This project is licensed with the [MIT](https://github.com/Paficent/TableUtils/blob/main/LICENSE) license.
+
+
+<!-- SUPPORT -->
+
+## ⭐️ Support the developer
+
+I put a lot of time and effort into these open source projects for absolutely free! However, if you've found any sort of use my projects and would like to help a broke 
+student, consider supporting me [here](https://buymeacoffee.com/paficent)
