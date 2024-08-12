@@ -42,7 +42,7 @@ Install this project with wally:
 
 
 ### Usage <a name="usage"></a>
-Usage examples for each function can be found in the Moonwave generated Documentation
+Usage examples for each function can be found in the Moonwave generated documentation.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
