@@ -1,4 +1,5 @@
 [tools]
+rojo = "rojo-rbx/rojo@7.4.3"
+wally = "UpliftGames/wally@0.3.2"
 lune = "lune-org/lune@0.8.2"
-rojo = "rojo-rbx/rojo@7.4.1"
 darklua = "seaofvoices/darklua@0.13.0"

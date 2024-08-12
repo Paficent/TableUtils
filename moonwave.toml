@@ -1,0 +1,19 @@
+gitRepoUrl = "https://github.com/Paficent/TableUtils"
+gitSourceBranch = "master"
+changelog = true
+
+
+[docusaurus]
+onBrokenLinks = "throw"
+onBrokenMarkdownLinks = "warn"
+title = "TableUtils"
+tagline = "A robust and strictly typed LuaU library with functions specifically designed for manipulating LuaU tables."
+
+
+[home]
+enabled = true
+
+[footer]
+style = "dark"
+copyright = "Copyright © 2024 Paficent. Built with Moonwave and Docusaurus"
+
