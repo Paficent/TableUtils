@@ -23,7 +23,7 @@
 ]=]
 
 --[=[
-    @type NestedDic<K,V> { [K]: V | NestedDict }
+    @type NestedDict<K,V> { [K]: V | NestedDict }
     @within TableUtils
 
     A table composed strictly of keys with the type of 'K', and values with the type of 'V', this table can also be nested.
