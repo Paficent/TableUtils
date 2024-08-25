@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v2.3.1">
 <title data-rh="true">TableUtils | TableUtils</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://Paficent.github.io/TableUtils/api/TableUtils"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docusaurus_tag" content="default"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docsearch:docusaurus_tag" content="default"><meta data-rh="true" property="og:title" content="TableUtils | TableUtils"><meta data-rh="true" name="description" content="A robust and strictly typed Luau library with functions specifically designed for manipulating tables."><meta data-rh="true" property="og:description" content="A robust and strictly typed Luau library with functions specifically designed for manipulating tables."><link data-rh="true" rel="canonical" href="https://Paficent.github.io/TableUtils/api/TableUtils"><link data-rh="true" rel="alternate" href="https://Paficent.github.io/TableUtils/api/TableUtils" hreflang="en"><link data-rh="true" rel="alternate" href="https://Paficent.github.io/TableUtils/api/TableUtils" hreflang="x-default"><link rel="stylesheet" href="/TableUtils/assets/css/styles.b56fbf6e.css">
-<link rel="preload" href="/TableUtils/assets/js/runtime~main.03068c6e.js" as="script">
-<link rel="preload" href="/TableUtils/assets/js/main.7559bea7.js" as="script">
+<link rel="preload" href="/TableUtils/assets/js/runtime~main.6af2ce05.js" as="script">
+<link rel="preload" href="/TableUtils/assets/js/main.585f8a2b.js" as="script">
 </head>
 <body class="navigation-with-keyboard">
 <script>!function(){function e(e){document.documentElement.setAttribute("data-theme",e)}var t=function(){var e=null;try{e=localStorage.getItem("theme")}catch(e){}return e}();null!==t?e(t):window.matchMedia("(prefers-color-scheme: dark)").matches?e("dark"):(window.matchMedia("(prefers-color-scheme: light)").matches,e("light"))}()</script><div id="__docusaurus">
@@ -66,7 +66,7 @@
 <span class="token function">print</span><span class="token punctuation">(</span>shallowCopy<span class="token punctuation">.</span>a<span class="token punctuation">)</span> <span class="token comment">-- Output: 1</span>
 <span class="token function">print</span><span class="token punctuation">(</span>shallowCopy<span class="token punctuation">.</span>b<span class="token punctuation">)</span> <span class="token comment">-- Output: 2</span>
 </code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="every"><code style="text-decoration:none">every</code><a href="#every" class="hash-link" aria-label="Direct link to every" title="Direct link to every">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/Paficent/TableUtils/blob/master/src/init.luau#L178"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>TableUtils<!-- -->.</code><code class="green_DgR4">every</code><code>(</code><div class="inset_uKQm"><div><code>tbl<!-- -->: </code><code class="blue_P4bS">Dictionary</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">K,</code><code class="blue_P4bS">V</code><code class="op_lSLc">&gt;</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="every"><code style="text-decoration:none">every</code><a href="#every" class="hash-link" aria-label="Direct link to every" title="Direct link to every">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/Paficent/TableUtils/blob/master/src/init.luau#L177"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>TableUtils<!-- -->.</code><code class="green_DgR4">every</code><code>(</code><div class="inset_uKQm"><div><code>tbl<!-- -->: </code><code class="blue_P4bS">Dictionary</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">K,</code><code class="blue_P4bS">V</code><code class="op_lSLc">&gt;</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
 <p>The input dictionary</p>
 </span></span></div><div><code>predicate<!-- -->: </code><code class="purple_ieR2">(</code><div class="inset_uKQm"><code>key<!-- -->: </code><code class="blue_P4bS">K</code><code class="purple_ieR2">,</code></div><div class="inset_uKQm"><code>value<!-- -->: </code><code class="blue_P4bS">V</code></div><code class="purple_ieR2">)</code><code class="purple_ieR2"> → </code><code class="blue_P4bS">boolean</code><span class="inlineDescription_G7Er">-- <span>
 <p>A predicate function to check elements</p>
@@ -83,7 +83,7 @@
 <span class="token keyword">end</span><span class="token punctuation">)</span>
 <span class="token function">print</span><span class="token punctuation">(</span>allEven<span class="token punctuation">)</span> <span class="token comment">-- Output: true</span>
 </code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="filter"><code style="text-decoration:none">filter</code><a href="#filter" class="hash-link" aria-label="Direct link to filter" title="Direct link to filter">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/Paficent/TableUtils/blob/master/src/init.luau#L206"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>TableUtils<!-- -->.</code><code class="green_DgR4">filter</code><code>(</code><div class="inset_uKQm"><div><code>tbl<!-- -->: </code><code class="blue_P4bS">Dictionary</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">K,</code><code class="blue_P4bS">V</code><code class="op_lSLc">&gt;</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="filter"><code style="text-decoration:none">filter</code><a href="#filter" class="hash-link" aria-label="Direct link to filter" title="Direct link to filter">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/Paficent/TableUtils/blob/master/src/init.luau#L205"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>TableUtils<!-- -->.</code><code class="green_DgR4">filter</code><code>(</code><div class="inset_uKQm"><div><code>tbl<!-- -->: </code><code class="blue_P4bS">Dictionary</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">K,</code><code class="blue_P4bS">V</code><code class="op_lSLc">&gt;</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
 <p>The input dictionary</p>
 </span></span></div><div><code>predicate<!-- -->: </code><code class="purple_ieR2">(</code><div class="inset_uKQm"><code>key<!-- -->: </code><code class="blue_P4bS">K</code><code class="purple_ieR2">,</code></div><div class="inset_uKQm"><code>value<!-- -->: </code><code class="blue_P4bS">V</code></div><code class="purple_ieR2">)</code><code class="purple_ieR2"> → </code><code class="blue_P4bS">boolean</code><span class="inlineDescription_G7Er">-- <span>
 <p>A predicate function to determine which elements to include</p>
@@ -100,7 +100,7 @@
 <span class="token keyword">end</span><span class="token punctuation">)</span>
 <span class="token function">print</span><span class="token punctuation">(</span>table<span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span>filteredValues<span class="token punctuation">,</span> <span class="token string">", "</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">-- Output: 2, 3</span>
 </code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="find"><code style="text-decoration:none">find</code><a href="#find" class="hash-link" aria-label="Direct link to find" title="Direct link to find">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/Paficent/TableUtils/blob/master/src/init.luau#L235"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>TableUtils<!-- -->.</code><code class="green_DgR4">find</code><code>(</code><div class="inset_uKQm"><div><code>tbl<!-- -->: </code><code class="blue_P4bS">Dictionary</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">K,</code><code class="blue_P4bS">V</code><code class="op_lSLc">&gt;</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="find"><code style="text-decoration:none">find</code><a href="#find" class="hash-link" aria-label="Direct link to find" title="Direct link to find">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/Paficent/TableUtils/blob/master/src/init.luau#L234"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>TableUtils<!-- -->.</code><code class="green_DgR4">find</code><code>(</code><div class="inset_uKQm"><div><code>tbl<!-- -->: </code><code class="blue_P4bS">Dictionary</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">K,</code><code class="blue_P4bS">V</code><code class="op_lSLc">&gt;</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
 <p>The input dictionary</p>
 </span></span></div><div><code>predicate<!-- -->: </code><code class="purple_ieR2">(</code><div class="inset_uKQm"><code>key<!-- -->: </code><code class="blue_P4bS">K</code><code class="purple_ieR2">,</code></div><div class="inset_uKQm"><code>value<!-- -->: </code><code class="blue_P4bS">V</code></div><code class="purple_ieR2">)</code><code class="purple_ieR2"> → </code><code class="blue_P4bS">boolean</code><span class="inlineDescription_G7Er">-- <span>
 <p>A predicate function to determine the matching element</p>
@@ -117,7 +117,7 @@
 <span class="token keyword">end</span><span class="token punctuation">)</span>
 <span class="token function">print</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span> <span class="token comment">-- Output: 2</span>
 </code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="findRecursive"><code style="text-decoration:none">findRecursive</code><a href="#findRecursive" class="hash-link" aria-label="Direct link to findRecursive" title="Direct link to findRecursive">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/Paficent/TableUtils/blob/master/src/init.luau#L265"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>TableUtils<!-- -->.</code><code class="green_DgR4">findRecursive</code><code>(</code><div class="inset_uKQm"><div><code>tbl<!-- -->: </code><code class="blue_P4bS">Dictionary</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">K,</code><code class="blue_P4bS">V</code><code class="op_lSLc">&gt;</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="findRecursive"><code style="text-decoration:none">findRecursive</code><a href="#findRecursive" class="hash-link" aria-label="Direct link to findRecursive" title="Direct link to findRecursive">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/Paficent/TableUtils/blob/master/src/init.luau#L263"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>TableUtils<!-- -->.</code><code class="green_DgR4">findRecursive</code><code>(</code><div class="inset_uKQm"><div><code>tbl<!-- -->: </code><code class="blue_P4bS">Dictionary</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">K,</code><code class="blue_P4bS">V</code><code class="op_lSLc">&gt;</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
 <p>The dictionary to search through</p>
 </span></span></div><div><code>value<!-- -->: </code><code class="blue_P4bS">any</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
 <p>The value to replace with</p>
@@ -136,7 +136,7 @@
 <span class="token keyword">end</span><span class="token punctuation">)</span>
 <span class="token function">print</span><span class="token punctuation">(</span>newDict<span class="token punctuation">.</span>b<span class="token punctuation">.</span>c<span class="token punctuation">)</span> <span class="token comment">-- Output: 99</span>
 </code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="flatten"><code style="text-decoration:none">flatten</code><a href="#flatten" class="hash-link" aria-label="Direct link to flatten" title="Direct link to flatten">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/Paficent/TableUtils/blob/master/src/init.luau#L299"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>TableUtils<!-- -->.</code><code class="green_DgR4">flatten</code><code>(</code><div class="inset_uKQm"><div><code>tbl<!-- -->: </code><code class="blue_P4bS">NestedDict</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">K,</code><code class="blue_P4bS">V</code><code class="op_lSLc">&gt;</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="flatten"><code style="text-decoration:none">flatten</code><a href="#flatten" class="hash-link" aria-label="Direct link to flatten" title="Direct link to flatten">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/Paficent/TableUtils/blob/master/src/init.luau#L301"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>TableUtils<!-- -->.</code><code class="green_DgR4">flatten</code><code>(</code><div class="inset_uKQm"><div><code>tbl<!-- -->: </code><code class="blue_P4bS">NestedDict</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">K,</code><code class="blue_P4bS">V</code><code class="op_lSLc">&gt;</code><span class="inlineDescription_G7Er">-- <span>
 <p>The input nested dictionary</p>
 </span></span></div></div><code>) → </code><code class="blue_P4bS">Array</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">V</code><code class="op_lSLc">&gt;</code><span class="inlineDescription_G7Er">-- <span>
 <p>A single-level array containing all values from the nested dictionary</p>
@@ -149,7 +149,7 @@
 <span class="token keyword">local</span> flattened <span class="token operator">=</span> TableUtils<span class="token punctuation">.</span><span class="token function">flatten</span><span class="token punctuation">(</span>myDict<span class="token punctuation">)</span>
 <span class="token function">print</span><span class="token punctuation">(</span>table<span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span>flattened<span class="token punctuation">,</span> <span class="token string">", "</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">-- Output: 1, 2, 3</span>
 </code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="indexOf"><code style="text-decoration:none">indexOf</code><a href="#indexOf" class="hash-link" aria-label="Direct link to indexOf" title="Direct link to indexOf">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/Paficent/TableUtils/blob/master/src/init.luau#L334"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>TableUtils<!-- -->.</code><code class="green_DgR4">indexOf</code><code>(</code><div class="inset_uKQm"><div><code>array<!-- -->: </code><code class="blue_P4bS">Array</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">V</code><code class="op_lSLc">&gt;</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="indexOf"><code style="text-decoration:none">indexOf</code><a href="#indexOf" class="hash-link" aria-label="Direct link to indexOf" title="Direct link to indexOf">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/Paficent/TableUtils/blob/master/src/init.luau#L336"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>TableUtils<!-- -->.</code><code class="green_DgR4">indexOf</code><code>(</code><div class="inset_uKQm"><div><code>array<!-- -->: </code><code class="blue_P4bS">Array</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">V</code><code class="op_lSLc">&gt;</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
 <p>The inputted array</p>
 </span></span></div><div><code>value<!-- -->: </code><code class="blue_P4bS">V</code><span class="inlineDescription_G7Er">-- <span>
 <p>The value to search for in the array</p>
@@ -166,7 +166,7 @@
 <span class="token comment">-- Find the index of a non-existent value</span>
 <span class="token function">print</span><span class="token punctuation">(</span>TableUtils<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>myArray<span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">-- Output: -1</span>
 </code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="isArray"><code style="text-decoration:none">isArray</code><a href="#isArray" class="hash-link" aria-label="Direct link to isArray" title="Direct link to isArray">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/Paficent/TableUtils/blob/master/src/init.luau#L368"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>TableUtils<!-- -->.</code><code class="green_DgR4">isArray</code><code>(</code><div class="inset_uKQm"><div><code>tbl<!-- -->: </code><code class="blue_P4bS">Array</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">V</code><code class="op_lSLc">&gt;</code><code class="op_lSLc"> | </code><code class="blue_P4bS">Table</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">any,</code><code class="blue_P4bS">V</code><code class="op_lSLc">&gt;</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="isArray"><code style="text-decoration:none">isArray</code><a href="#isArray" class="hash-link" aria-label="Direct link to isArray" title="Direct link to isArray">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/Paficent/TableUtils/blob/master/src/init.luau#L370"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>TableUtils<!-- -->.</code><code class="green_DgR4">isArray</code><code>(</code><div class="inset_uKQm"><div><code>tbl<!-- -->: </code><code class="blue_P4bS">Array</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">V</code><code class="op_lSLc">&gt;</code><code class="op_lSLc"> | </code><code class="blue_P4bS">Table</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">any,</code><code class="blue_P4bS">V</code><code class="op_lSLc">&gt;</code><span class="inlineDescription_G7Er">-- <span>
 <p>The inputted array or table</p>
 </span></span></div></div><code>) → </code><code class="blue_P4bS">boolean</code><span class="inlineDescription_G7Er">-- <span>
 <p>Returns whether or not the input table is an array</p>
@@ -184,7 +184,7 @@
 <span class="token comment">-- Check if it is an array</span>
 <span class="token function">print</span><span class="token punctuation">(</span>TableUtils<span class="token punctuation">.</span><span class="token function">isArray</span><span class="token punctuation">(</span>myTable<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">-- Output: false</span>
 </code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="keys"><code style="text-decoration:none">keys</code><a href="#keys" class="hash-link" aria-label="Direct link to keys" title="Direct link to keys">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/Paficent/TableUtils/blob/master/src/init.luau#L387"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>TableUtils<!-- -->.</code><code class="green_DgR4">keys</code><code>(</code><div class="inset_uKQm"><div><code>tbl<!-- -->: </code><code class="blue_P4bS">Dictionary</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">K,</code><code class="blue_P4bS">V</code><code class="op_lSLc">&gt;</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="keys"><code style="text-decoration:none">keys</code><a href="#keys" class="hash-link" aria-label="Direct link to keys" title="Direct link to keys">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/Paficent/TableUtils/blob/master/src/init.luau#L389"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>TableUtils<!-- -->.</code><code class="green_DgR4">keys</code><code>(</code><div class="inset_uKQm"><div><code>tbl<!-- -->: </code><code class="blue_P4bS">Dictionary</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">K,</code><code class="blue_P4bS">V</code><code class="op_lSLc">&gt;</code><span class="inlineDescription_G7Er">-- <span>
 <p>The input dictionary</p>
 </span></span></div></div><code>) → </code><code class="blue_P4bS">Array</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">K</code><code class="op_lSLc">&gt;</code><span class="inlineDescription_G7Er">-- <span>
 <p>An array containing all keys from the dictionary</p>
@@ -197,7 +197,7 @@
 <span class="token keyword">local</span> keys <span class="token operator">=</span> TableUtils<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>myDict<span class="token punctuation">)</span>
 <span class="token function">print</span><span class="token punctuation">(</span>table<span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span>keys<span class="token punctuation">,</span> <span class="token string">", "</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">-- Output: a, b, c</span>
 </code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="length"><code style="text-decoration:none">length</code><a href="#length" class="hash-link" aria-label="Direct link to length" title="Direct link to length">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/Paficent/TableUtils/blob/master/src/init.luau#L409"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>TableUtils<!-- -->.</code><code class="green_DgR4">length</code><code>(</code><div class="inset_uKQm"><div><code>array<!-- -->: </code><code class="blue_P4bS">Array</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">V</code><code class="op_lSLc">&gt;</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="length"><code style="text-decoration:none">length</code><a href="#length" class="hash-link" aria-label="Direct link to length" title="Direct link to length">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/Paficent/TableUtils/blob/master/src/init.luau#L411"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>TableUtils<!-- -->.</code><code class="green_DgR4">length</code><code>(</code><div class="inset_uKQm"><div><code>array<!-- -->: </code><code class="blue_P4bS">Array</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">V</code><code class="op_lSLc">&gt;</code><span class="inlineDescription_G7Er">-- <span>
 <p>The inputted array</p>
 </span></span></div></div><code>) → </code><code class="blue_P4bS">number</code><span class="inlineDescription_G7Er">-- <span>
 <p>Returns the total number of objects within an array</p>
@@ -209,7 +209,7 @@
 <span class="token comment">-- Find the length of the array</span>
 <span class="token function">print</span><span class="token punctuation">(</span>TableUtils<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span>myArray<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">-- Output: 5</span>
 </code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="map"><code style="text-decoration:none">map</code><a href="#map" class="hash-link" aria-label="Direct link to map" title="Direct link to map">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/Paficent/TableUtils/blob/master/src/init.luau#L435"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>TableUtils<!-- -->.</code><code class="green_DgR4">map</code><code>(</code><div class="inset_uKQm"><div><code>array<!-- -->: </code><code class="blue_P4bS">Array</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">V</code><code class="op_lSLc">&gt;</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="map"><code style="text-decoration:none">map</code><a href="#map" class="hash-link" aria-label="Direct link to map" title="Direct link to map">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/Paficent/TableUtils/blob/master/src/init.luau#L437"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>TableUtils<!-- -->.</code><code class="green_DgR4">map</code><code>(</code><div class="inset_uKQm"><div><code>array<!-- -->: </code><code class="blue_P4bS">Array</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">V</code><code class="op_lSLc">&gt;</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
 <p>The inputted array</p>
 </span></span></div><div><code>callback<!-- -->: </code><code class="purple_ieR2">(</code><div class="inset_uKQm"><code>index<!-- -->: </code><code class="blue_P4bS">number</code><code class="purple_ieR2">,</code></div><div class="inset_uKQm"><code>value<!-- -->: </code><code class="blue_P4bS">V</code></div><code class="purple_ieR2">)</code><code class="purple_ieR2"> → </code><code class="blue_P4bS">R</code><span class="inlineDescription_G7Er">-- <span>
 <p>A callback function that maps values to a new type</p>
@@ -226,7 +226,7 @@
 <span class="token keyword">end</span><span class="token punctuation">)</span>
 <span class="token function">print</span><span class="token punctuation">(</span>table<span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span>mappedArray<span class="token punctuation">,</span> <span class="token string">", "</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">-- Output: 2, 4, 6, 8, 10</span>
 </code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="merge"><code style="text-decoration:none">merge</code><a href="#merge" class="hash-link" aria-label="Direct link to merge" title="Direct link to merge">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/Paficent/TableUtils/blob/master/src/init.luau#L492"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>TableUtils<!-- -->.</code><code class="green_DgR4">merge</code><code>(</code><div class="inset_uKQm"><div><code>...<!-- -->: </code><code class="purple_ieR2">(</code><div class="inset_uKQm"><code class="blue_P4bS">Array</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">V</code><code class="op_lSLc">&gt;</code><code class="op_lSLc"> | </code><code class="blue_P4bS">Dictionary</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">K</code><code class="purple_ieR2">,</code></div><div class="inset_uKQm"><code class="blue_P4bS">V</code><code class="op_lSLc">&gt;</code></div><code class="purple_ieR2">)</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="merge"><code style="text-decoration:none">merge</code><a href="#merge" class="hash-link" aria-label="Direct link to merge" title="Direct link to merge">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/Paficent/TableUtils/blob/master/src/init.luau#L494"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>TableUtils<!-- -->.</code><code class="green_DgR4">merge</code><code>(</code><div class="inset_uKQm"><div><code>...<!-- -->: </code><code class="purple_ieR2">(</code><div class="inset_uKQm"><code class="blue_P4bS">Array</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">V</code><code class="op_lSLc">&gt;</code><code class="op_lSLc"> | </code><code class="blue_P4bS">Dictionary</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">K</code><code class="purple_ieR2">,</code></div><div class="inset_uKQm"><code class="blue_P4bS">V</code><code class="op_lSLc">&gt;</code></div><code class="purple_ieR2">)</code><span class="inlineDescription_G7Er">-- <span>
 <p>Arrays or dictionaries to be merged</p>
 </span></span></div></div><code>) → </code><code class="purple_ieR2">(</code><div class="inset_uKQm"><code class="blue_P4bS">Array</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">V</code><code class="op_lSLc">&gt;</code><code class="op_lSLc"> | </code><code class="blue_P4bS">Dictionary</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">K</code><code class="purple_ieR2">,</code></div><div class="inset_uKQm"><code class="blue_P4bS">V</code><code class="op_lSLc">&gt;</code></div><code class="purple_ieR2">)</code><span class="inlineDescription_G7Er">-- <span>
 <p>A new array or dictionary containing all elements from the input tables</p>
@@ -260,7 +260,7 @@
 <span class="token comment">-- c 3</span>
 <span class="token comment">-- d 4</span>
 </code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="mergeDeep"><code style="text-decoration:none">mergeDeep</code><a href="#mergeDeep" class="hash-link" aria-label="Direct link to mergeDeep" title="Direct link to mergeDeep">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/Paficent/TableUtils/blob/master/src/init.luau#L551"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>TableUtils<!-- -->.</code><code class="green_DgR4">mergeDeep</code><code>(</code><div class="inset_uKQm"><div><code>...<!-- -->: </code><code class="blue_P4bS">NestedDict</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">K,</code><code class="blue_P4bS">V</code><code class="op_lSLc">&gt;</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="mergeDeep"><code style="text-decoration:none">mergeDeep</code><a href="#mergeDeep" class="hash-link" aria-label="Direct link to mergeDeep" title="Direct link to mergeDeep">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/Paficent/TableUtils/blob/master/src/init.luau#L553"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>TableUtils<!-- -->.</code><code class="green_DgR4">mergeDeep</code><code>(</code><div class="inset_uKQm"><div><code>...<!-- -->: </code><code class="blue_P4bS">NestedDict</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">K,</code><code class="blue_P4bS">V</code><code class="op_lSLc">&gt;</code><span class="inlineDescription_G7Er">-- <span>
 <p>Nested dictionaries to be merged</p>
 </span></span></div></div><code>) → </code><code class="blue_P4bS">NestedDict</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">K,</code><code class="blue_P4bS">V</code><code class="op_lSLc">&gt;</code><span class="inlineDescription_G7Er">-- <span>
 <p>A new nested dictionary containing all key-value pairs from the input dictionaries</p>
@@ -277,7 +277,7 @@
 <span class="token function">print</span><span class="token punctuation">(</span>mergedDict<span class="token punctuation">.</span>b<span class="token punctuation">)</span>   <span class="token comment">-- Output: 2</span>
 <span class="token function">print</span><span class="token punctuation">(</span>mergedDict<span class="token punctuation">.</span>c<span class="token punctuation">)</span>   <span class="token comment">-- Output: 3</span>
 </code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="reduce"><code style="text-decoration:none">reduce</code><a href="#reduce" class="hash-link" aria-label="Direct link to reduce" title="Direct link to reduce">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/Paficent/TableUtils/blob/master/src/init.luau#L593"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>TableUtils<!-- -->.</code><code class="green_DgR4">reduce</code><code>(</code><div class="inset_uKQm"><div><code>array<!-- -->: </code><code class="blue_P4bS">Array</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">V</code><code class="op_lSLc">&gt;</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="reduce"><code style="text-decoration:none">reduce</code><a href="#reduce" class="hash-link" aria-label="Direct link to reduce" title="Direct link to reduce">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/Paficent/TableUtils/blob/master/src/init.luau#L594"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>TableUtils<!-- -->.</code><code class="green_DgR4">reduce</code><code>(</code><div class="inset_uKQm"><div><code>array<!-- -->: </code><code class="blue_P4bS">Array</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">V</code><code class="op_lSLc">&gt;</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
 <p>The inputted array</p>
 </span></span></div><div><code>callback<!-- -->: </code><code class="purple_ieR2">(</code><div class="inset_uKQm"><code>accumulator<!-- -->: </code><code class="blue_P4bS">V</code><code class="purple_ieR2">,</code></div><div class="inset_uKQm"><code>index<!-- -->: </code><code class="blue_P4bS">number</code><code class="purple_ieR2">,</code></div><div class="inset_uKQm"><code>value<!-- -->: </code><code class="blue_P4bS">U</code></div><code class="purple_ieR2">)</code><code class="purple_ieR2"> → </code><code class="blue_P4bS">U</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
 <p>A callback function to reduce values</p>
@@ -296,7 +296,7 @@
 <span class="token keyword">end</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
 <span class="token function">print</span><span class="token punctuation">(</span>sum<span class="token punctuation">)</span> <span class="token comment">-- Output: 15</span>
 </code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="reverse"><code style="text-decoration:none">reverse</code><a href="#reverse" class="hash-link" aria-label="Direct link to reverse" title="Direct link to reverse">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/Paficent/TableUtils/blob/master/src/init.luau#L621"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>TableUtils<!-- -->.</code><code class="green_DgR4">reverse</code><code>(</code><div class="inset_uKQm"><div><code>array<!-- -->: </code><code class="blue_P4bS">Array</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">V</code><code class="op_lSLc">&gt;</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="reverse"><code style="text-decoration:none">reverse</code><a href="#reverse" class="hash-link" aria-label="Direct link to reverse" title="Direct link to reverse">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/Paficent/TableUtils/blob/master/src/init.luau#L626"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>TableUtils<!-- -->.</code><code class="green_DgR4">reverse</code><code>(</code><div class="inset_uKQm"><div><code>array<!-- -->: </code><code class="blue_P4bS">Array</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">V</code><code class="op_lSLc">&gt;</code><span class="inlineDescription_G7Er">-- <span>
 <p>The inputted array</p>
 </span></span></div></div><code>) → </code><code class="blue_P4bS">Array</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">V</code><code class="op_lSLc">&gt;</code><span class="inlineDescription_G7Er">-- <span>
 <p>The reversed array</p>
@@ -309,7 +309,7 @@
 <span class="token keyword">local</span> reversedArray <span class="token operator">=</span> TableUtils<span class="token punctuation">.</span><span class="token function">reverse</span><span class="token punctuation">(</span>myArray<span class="token punctuation">)</span>
 <span class="token function">print</span><span class="token punctuation">(</span>table<span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span>reversedArray<span class="token punctuation">,</span> <span class="token string">", "</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">-- Output: 5, 4, 3, 2, 1</span>
 </code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="some"><code style="text-decoration:none">some</code><a href="#some" class="hash-link" aria-label="Direct link to some" title="Direct link to some">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/Paficent/TableUtils/blob/master/src/init.luau#L654"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>TableUtils<!-- -->.</code><code class="green_DgR4">some</code><code>(</code><div class="inset_uKQm"><div><code>tbl<!-- -->: </code><code class="blue_P4bS">Dictionary</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">K,</code><code class="blue_P4bS">V</code><code class="op_lSLc">&gt;</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="some"><code style="text-decoration:none">some</code><a href="#some" class="hash-link" aria-label="Direct link to some" title="Direct link to some">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/Paficent/TableUtils/blob/master/src/init.luau#L659"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>TableUtils<!-- -->.</code><code class="green_DgR4">some</code><code>(</code><div class="inset_uKQm"><div><code>tbl<!-- -->: </code><code class="blue_P4bS">Dictionary</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">K,</code><code class="blue_P4bS">V</code><code class="op_lSLc">&gt;</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
 <p>The input dictionary</p>
 </span></span></div><div><code>predicate<!-- -->: </code><code class="purple_ieR2">(</code><div class="inset_uKQm"><code>key<!-- -->: </code><code class="blue_P4bS">K</code><code class="purple_ieR2">,</code></div><div class="inset_uKQm"><code>value<!-- -->: </code><code class="blue_P4bS">V</code></div><code class="purple_ieR2">)</code><code class="purple_ieR2"> → </code><code class="blue_P4bS">boolean</code><span class="inlineDescription_G7Er">-- <span>
 <p>A predicate function to check elements</p>
@@ -326,7 +326,7 @@
 <span class="token keyword">end</span><span class="token punctuation">)</span>
 <span class="token function">print</span><span class="token punctuation">(</span>hasGreaterThan2<span class="token punctuation">)</span> <span class="token comment">-- Output: true</span>
 </code></pre>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="unique"><code style="text-decoration:none">unique</code><a href="#unique" class="hash-link" aria-label="Direct link to unique" title="Direct link to unique">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/Paficent/TableUtils/blob/master/src/init.luau#L679"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>TableUtils<!-- -->.</code><code class="green_DgR4">unique</code><code>(</code><div class="inset_uKQm"><div><code>array<!-- -->: </code><code class="blue_P4bS">Array</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">V</code><code class="op_lSLc">&gt;</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="unique"><code style="text-decoration:none">unique</code><a href="#unique" class="hash-link" aria-label="Direct link to unique" title="Direct link to unique">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/Paficent/TableUtils/blob/master/src/init.luau#L684"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>TableUtils<!-- -->.</code><code class="green_DgR4">unique</code><code>(</code><div class="inset_uKQm"><div><code>array<!-- -->: </code><code class="blue_P4bS">Array</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">V</code><code class="op_lSLc">&gt;</code><span class="inlineDescription_G7Er">-- <span>
 <p>The inputted array</p>
 </span></span></div></div><code>) → </code><code class="blue_P4bS">Array</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">V</code><code class="op_lSLc">&gt;</code><span class="inlineDescription_G7Er">-- <span>
 <p>A new array with duplicate values removed</p>
@@ -435,7 +435,7 @@
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 178,
+                &quot;line&quot;: 177,
                 &quot;path&quot;: &quot;src/init.luau&quot;
             }
         },
@@ -462,7 +462,7 @@
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 206,
+                &quot;line&quot;: 205,
                 &quot;path&quot;: &quot;src/init.luau&quot;
             }
         },
@@ -489,7 +489,7 @@
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 235,
+                &quot;line&quot;: 234,
                 &quot;path&quot;: &quot;src/init.luau&quot;
             }
         },
@@ -521,7 +521,7 @@
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 265,
+                &quot;line&quot;: 263,
                 &quot;path&quot;: &quot;src/init.luau&quot;
             }
         },
@@ -543,7 +543,7 @@
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 299,
+                &quot;line&quot;: 301,
                 &quot;path&quot;: &quot;src/init.luau&quot;
             }
         },
@@ -570,7 +570,7 @@
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 334,
+                &quot;line&quot;: 336,
                 &quot;path&quot;: &quot;src/init.luau&quot;
             }
         },
@@ -592,7 +592,7 @@
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 368,
+                &quot;line&quot;: 370,
                 &quot;path&quot;: &quot;src/init.luau&quot;
             }
         },
@@ -614,7 +614,7 @@
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 387,
+                &quot;line&quot;: 389,
                 &quot;path&quot;: &quot;src/init.luau&quot;
             }
         },
@@ -636,7 +636,7 @@
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 409,
+                &quot;line&quot;: 411,
                 &quot;path&quot;: &quot;src/init.luau&quot;
             }
         },
@@ -663,7 +663,7 @@
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 435,
+                &quot;line&quot;: 437,
                 &quot;path&quot;: &quot;src/init.luau&quot;
             }
         },
@@ -685,7 +685,7 @@
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 492,
+                &quot;line&quot;: 494,
                 &quot;path&quot;: &quot;src/init.luau&quot;
             }
         },
@@ -707,7 +707,7 @@
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 551,
+                &quot;line&quot;: 553,
                 &quot;path&quot;: &quot;src/init.luau&quot;
             }
         },
@@ -739,7 +739,7 @@
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 593,
+                &quot;line&quot;: 594,
                 &quot;path&quot;: &quot;src/init.luau&quot;
             }
         },
@@ -761,7 +761,7 @@
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 621,
+                &quot;line&quot;: 626,
                 &quot;path&quot;: &quot;src/init.luau&quot;
             }
         },
@@ -788,7 +788,7 @@
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 654,
+                &quot;line&quot;: 659,
                 &quot;path&quot;: &quot;src/init.luau&quot;
             }
         },
@@ -810,7 +810,7 @@
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 679,
+                &quot;line&quot;: 684,
                 &quot;path&quot;: &quot;src/init.luau&quot;
             }
         }
@@ -852,7 +852,7 @@
         &quot;path&quot;: &quot;src/init.luau&quot;
     }
 }</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a><ul><li><a href="#Array&lt;V&gt;" class="table-of-contents__link toc-highlight">Array<v></v></a></li><li><a href="#Dictionary&lt;K,V&gt;" class="table-of-contents__link toc-highlight">Dictionary<k ,v></k></a></li><li><a href="#NestedDict&lt;K,V&gt;" class="table-of-contents__link toc-highlight">NestedDict<k ,v></k></a></li></ul></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#chunk" class="table-of-contents__link toc-highlight">.chunk</a></li><li><a href="#clone" class="table-of-contents__link toc-highlight">.clone</a></li><li><a href="#cloneShallow" class="table-of-contents__link toc-highlight">.cloneShallow</a></li><li><a href="#every" class="table-of-contents__link toc-highlight">.every</a></li><li><a href="#filter" class="table-of-contents__link toc-highlight">.filter</a></li><li><a href="#find" class="table-of-contents__link toc-highlight">.find</a></li><li><a href="#findRecursive" class="table-of-contents__link toc-highlight">.findRecursive</a></li><li><a href="#flatten" class="table-of-contents__link toc-highlight">.flatten</a></li><li><a href="#indexOf" class="table-of-contents__link toc-highlight">.indexOf</a></li><li><a href="#isArray" class="table-of-contents__link toc-highlight">.isArray</a></li><li><a href="#keys" class="table-of-contents__link toc-highlight">.keys</a></li><li><a href="#length" class="table-of-contents__link toc-highlight">.length</a></li><li><a href="#map" class="table-of-contents__link toc-highlight">.map</a></li><li><a href="#merge" class="table-of-contents__link toc-highlight">.merge</a></li><li><a href="#mergeDeep" class="table-of-contents__link toc-highlight">.mergeDeep</a></li><li><a href="#reduce" class="table-of-contents__link toc-highlight">.reduce</a></li><li><a href="#reverse" class="table-of-contents__link toc-highlight">.reverse</a></li><li><a href="#some" class="table-of-contents__link toc-highlight">.some</a></li><li><a href="#unique" class="table-of-contents__link toc-highlight">.unique</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2024 Paficent. Built with Moonwave and Docusaurus</div></div></div></footer></div>
-<script src="/TableUtils/assets/js/runtime~main.03068c6e.js"></script>
-<script src="/TableUtils/assets/js/main.7559bea7.js"></script>
+<script src="/TableUtils/assets/js/runtime~main.6af2ce05.js"></script>
+<script src="/TableUtils/assets/js/main.585f8a2b.js"></script>
 </body>
 </html>
