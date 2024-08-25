@@ -10,7 +10,7 @@ In order to run this project you need [aftman](https://github.com/LPGhatguy/aftm
 Install this project with wally:
 
 ```sh
-  wally install paficent/tableutils@^1
+wally install paficent/tableutils@^1
 ```
 
 
