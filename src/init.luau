@@ -33,22 +33,22 @@ local TableUtils = {}
 
 export type Array<V> = { V }
 export type Dictionary<K, V> = { [K]: V }
-export type NestedDict<K, V> = { [K]: V | NestedDict<K,V>}
+export type NestedDict<K, V> = { [K]: V | NestedDict<K, V> }
 
 type PredicateFunc<K, V> = (key: K, value: V) -> boolean
 
 local function isArray<V>(tbl: Array<V> | Dictionary<any, V>): boolean
-    if typeof(tbl) ~= "table" then
-        return false
-    end
+	if typeof(tbl) ~= "table" then
+		return false
+	end
 
-    for key in pairs(tbl) do
-        if typeof(key) ~= "number" then
-            return false
-        end
-    end
+	for key in pairs(tbl) do
+		if typeof(key) ~= "number" then
+			return false
+		end
+	end
 
-    return true
+	return true
 end
 
 --[=[
@@ -74,30 +74,30 @@ end
     ```
 ]=]
 function TableUtils.chunk<V>(array: Array<V>, size: number): Array<Array<V>>
-    if not isArray(array) then
-        error("TableUtils.chunk called on non-array")
-    end
+	if not isArray(array) then
+		error("TableUtils.chunk called on non-array")
+	end
 
-    if size <= 0 then
-        error("Chunk size must be greater than 0")
-    end
+	if size <= 0 then
+		error("Chunk size must be greater than 0")
+	end
 
-    local result: Array<Array<V>> = {}
-    local chunk: Array<V> = {}
+	local result: Array<Array<V>> = {}
+	local chunk: Array<V> = {}
 
-    for i, value in ipairs(array) do
-        if (i - 1) % size == 0 and i > 1 then
-            table.insert(result, chunk)
-            chunk = {}
-        end
-        table.insert(chunk, value)
-    end
+	for i, value in ipairs(array) do
+		if (i - 1) % size == 0 and i > 1 then
+			table.insert(result, chunk)
+			chunk = {}
+		end
+		table.insert(chunk, value)
+	end
 
-    if #chunk > 0 then
-        table.insert(result, chunk)
-    end
+	if #chunk > 0 then
+		table.insert(result, chunk)
+	end
 
-    return result
+	return result
 end
 
 --[=[
@@ -117,19 +117,19 @@ end
     ```
 ]=]
 function TableUtils.clone<K, V>(tbl: NestedDict<K, V>): NestedDict<K, V>
-    local function cloneTable(tbl: NestedDict<K, V>): NestedDict<K, V>
-        local newTable: NestedDict<K, V> = {}
-        for key, value in pairs(tbl) do
-            if typeof(value) == "table" then
-                newTable[key] = cloneTable(value :: NestedDict<K, V>)
-            else
-                newTable[key] = value
-            end
-        end
-        return newTable
-    end
+	local function cloneTable(tbl: NestedDict<K, V>): NestedDict<K, V>
+		local newTable: NestedDict<K, V> = {}
+		for key, value in pairs(tbl) do
+			if typeof(value) == "table" then
+				newTable[key] = cloneTable(value :: NestedDict<K, V>)
+			else
+				newTable[key] = value
+			end
+		end
+		return newTable
+	end
 
-    return cloneTable(tbl)
+	return cloneTable(tbl)
 end
 
 --[=[
@@ -149,13 +149,12 @@ end
     ```
 ]=]
 function TableUtils.cloneShallow<K, V>(tbl: Dictionary<K, V>): Dictionary<K, V>
-    local clone = {}
-    for key, value in pairs(tbl) do
-        clone[key] = value
-    end
-    return clone
+	local clone = {}
+	for key, value in pairs(tbl) do
+		clone[key] = value
+	end
+	return clone
 end
-
 
 --[=[
     Checks if all elements in a dictionary satisfy a condition.
@@ -176,13 +175,13 @@ end
     ```
 ]=]
 function TableUtils.every<K, V>(tbl: Dictionary<K, V>, predicate: PredicateFunc<K, V>): boolean
-    assert(type(predicate) == "function", "Predicate must be a function")
-    for key, value in pairs(tbl) do
-        if not predicate(key, value) then
-            return false
-        end
-    end
-    return true
+	assert(type(predicate) == "function", "Predicate must be a function")
+	for key, value in pairs(tbl) do
+		if not predicate(key, value) then
+			return false
+		end
+	end
+	return true
 end
 
 --[=[
@@ -204,14 +203,14 @@ end
     ```
 ]=]
 function TableUtils.filter<K, V>(tbl: Dictionary<K, V>, predicate: PredicateFunc<K, V>): Array<V>
-    assert(type(predicate) == "function", "Predicate must be a function")
-    local results = {}
-    for key, value in pairs(tbl) do
-        if predicate(key, value) then
-            table.insert(results, value)
-        end
-    end
-    return results
+	assert(type(predicate) == "function", "Predicate must be a function")
+	local results = {}
+	for key, value in pairs(tbl) do
+		if predicate(key, value) then
+			table.insert(results, value)
+		end
+	end
+	return results
 end
 
 --[=[
@@ -233,15 +232,14 @@ end
     ```
 ]=]
 function TableUtils.find<K, V>(tbl: Dictionary<K, V>, predicate: PredicateFunc<K, V>): V?
-    assert(type(predicate) == "function", "Predicate must be a function")
-    for key, value in pairs(tbl) do
-        if predicate(key, value) then
-            return value
-        end
-    end
-    return nil
+	assert(type(predicate) == "function", "Predicate must be a function")
+	for key, value in pairs(tbl) do
+		if predicate(key, value) then
+			return value
+		end
+	end
+	return nil
 end
-
 
 --[=[
     Recursively finds and replaces values in a dictionary based on a predicate function.
@@ -262,23 +260,27 @@ end
     print(newDict.b.c) -- Output: 99
     ```
 ]=]
-function TableUtils.findRecursive<K>(tbl: Dictionary<K, any>, value: any, predicate: PredicateFunc<K, any>): Dictionary<K, any>
-    local function findRecursiveHelper(currentTbl: Dictionary<K, any>): Dictionary<K, any>
-        local newTable: Dictionary<K, any> = {}
-        for key, val in pairs(currentTbl) do
-            if typeof(val) == "table" then
-                newTable[key] = findRecursiveHelper(val :: Dictionary<K, any>)
-            else
-                newTable[key] = val
-            end
-            if predicate(key, val) then
-                newTable[key] = value
-            end
-        end
-        return newTable
-    end
+function TableUtils.findRecursive<K>(
+	tbl: Dictionary<K, any>,
+	value: any,
+	predicate: PredicateFunc<K, any>
+): Dictionary<K, any>
+	local function findRecursiveHelper(currentTbl: Dictionary<K, any>): Dictionary<K, any>
+		local newTable: Dictionary<K, any> = {}
+		for key, val in pairs(currentTbl) do
+			if typeof(val) == "table" then
+				newTable[key] = findRecursiveHelper(val :: Dictionary<K, any>)
+			else
+				newTable[key] = val
+			end
+			if predicate(key, val) then
+				newTable[key] = value
+			end
+		end
+		return newTable
+	end
 
-    return findRecursiveHelper(tbl)
+	return findRecursiveHelper(tbl)
 end
 
 --[=[
@@ -297,20 +299,20 @@ end
     ```
 ]=]
 function TableUtils.flatten<K, V>(tbl: NestedDict<K, V>): Array<V>
-    local result = {}
-    
-    local function flattenRecursively(subTable: NestedDict<K, V>)
-        for _, value in pairs(subTable) do
-            if typeof(value) == "table" then
-                flattenRecursively(value :: NestedDict<K, V>)
-            else
-                table.insert(result, value)
-            end
-        end
-    end
+	local result = {}
 
-    flattenRecursively(tbl)
-    return result
+	local function flattenRecursively(subTable: NestedDict<K, V>)
+		for _, value in pairs(subTable) do
+			if typeof(value) == "table" then
+				flattenRecursively(value :: NestedDict<K, V>)
+			else
+				table.insert(result, value)
+			end
+		end
+	end
+
+	flattenRecursively(tbl)
+	return result
 end
 
 --[=[
@@ -332,17 +334,17 @@ end
     ```
 ]=]
 function TableUtils.indexOf<V>(array: Array<V>, value: V): number
-    if not isArray(array) then
-        error("TableUtils.indexOf called on non-array")
-    end
+	if not isArray(array) then
+		error("TableUtils.indexOf called on non-array")
+	end
 
-    for index, val in ipairs(array) do
-        if val == value then
-            return index
-        end
-    end
+	for index, val in ipairs(array) do
+		if val == value then
+			return index
+		end
+	end
 
-    return -1
+	return -1
 end
 
 --[=[
@@ -366,7 +368,7 @@ end
     ```
 ]=]
 function TableUtils.isArray<V>(tbl: Array<V> | Dictionary<any, V>): boolean
-    return isArray(tbl)
+	return isArray(tbl)
 end
 
 --[=[
@@ -385,11 +387,11 @@ end
     ```
 ]=]
 function TableUtils.keys<K, V>(tbl: Dictionary<K, V>): Array<K>
-    local keys = {}
-    for key in pairs(tbl) do
-        table.insert(keys, key)
-    end
-    return keys
+	local keys = {}
+	for key in pairs(tbl) do
+		table.insert(keys, key)
+	end
+	return keys
 end
 
 --[=[
@@ -407,11 +409,11 @@ end
     ```
 ]=]
 function TableUtils.length<V>(array: Array<V>): number
-    if not isArray(array) then
-        error("TableUtils.length called on non-array")
-    end
+	if not isArray(array) then
+		error("TableUtils.length called on non-array")
+	end
 
-    return #array
+	return #array
 end
 
 --[=[
@@ -433,24 +435,24 @@ end
     ```
 ]=]
 function TableUtils.map<V, R>(array: Array<V>, callback: (index: number, value: V) -> R): Array<R>
-    if not isArray(array) then
-        error("TableUtils.map called on non-array")
-    end
+	if not isArray(array) then
+		error("TableUtils.map called on non-array")
+	end
 
-    if typeof(callback) ~= "function" then
-        error("Invalid usage: 'callback' is not a function")
-    end
+	if typeof(callback) ~= "function" then
+		error("Invalid usage: 'callback' is not a function")
+	end
 
-    local newArray: Array<R> = {}
+	local newArray: Array<R> = {}
 
-    for i, value in ipairs(array) do
-        local mappedValue: R = callback(i, value)
-        if mappedValue ~= nil then
-            table.insert(newArray, mappedValue)
-        end
-    end
+	for i, value in ipairs(array) do
+		local mappedValue: R = callback(i, value)
+		if mappedValue ~= nil then
+			table.insert(newArray, mappedValue)
+		end
+	end
 
-    return newArray
+	return newArray
 end
 
 --[=[
@@ -490,43 +492,43 @@ end
     ```
 ]=]
 function TableUtils.merge(...: any): any
-    local tables = { ... }
+	local tables = { ... }
 
-    -- Check if all tables are arrays or dictionaries
-    local isAllArrays = true
-    local isAllDictionaries = true
+	-- Check if all tables are arrays or dictionaries
+	local isAllArrays = true
+	local isAllDictionaries = true
 
-    for _, tbl in ipairs(tables) do
-        if isArray(tbl) then
-            isAllDictionaries = false
-        elseif typeof(tbl) == "table" then
-            isAllArrays = false
-        else
-            error("TableUtils.merge called with non-table argument")
-        end
-    end
+	for _, tbl in ipairs(tables) do
+		if isArray(tbl) then
+			isAllDictionaries = false
+		elseif typeof(tbl) == "table" then
+			isAllArrays = false
+		else
+			error("TableUtils.merge called with non-table argument")
+		end
+	end
 
-    -- Handle arrays
-    if isAllArrays then
-        local newArray = {}
-        for _, array in ipairs(tables) do
-            table.move(array, 1, #array, #newArray + 1, newArray)
-        end
-        return newArray
-    end
+	-- Handle arrays
+	if isAllArrays then
+		local newArray = {}
+		for _, array in ipairs(tables) do
+			table.move(array, 1, #array, #newArray + 1, newArray)
+		end
+		return newArray
+	end
 
-    -- Handle dictionaries
-    if isAllDictionaries then
-        local result = {}
-        for _, tbl in ipairs(tables) do
-            for key, value in pairs(tbl) do
-                result[key] = value
-            end
-        end
-        return result
-    end
+	-- Handle dictionaries
+	if isAllDictionaries then
+		local result = {}
+		for _, tbl in ipairs(tables) do
+			for key, value in pairs(tbl) do
+				result[key] = value
+			end
+		end
+		return result
+	end
 
-    error("TableUtils.merge called with mixed or incompatible table types")
+	error("TableUtils.merge called with mixed or incompatible table types")
 end
 
 --[=[
@@ -549,27 +551,26 @@ end
     ```
 ]=]
 function TableUtils.mergeDeep<K, V>(...: NestedDict<K, V>): NestedDict<K, V>
-    local result: NestedDict<K, V> = {}
-    
-    local function merge(src: NestedDict<K, V>, dest: NestedDict<K, V>)
-        for key, value in pairs(src) do
-            if typeof(value) == "table" and typeof(dest[key]) == "table" then
-                merge(value :: NestedDict<K, V>, dest[key] :: NestedDict<K, V>)
-            elseif typeof(value) == "table" then
-                dest[key] = TableUtils.mergeDeep(value :: NestedDict<K, V>) :: V | NestedDict<K, V>
-            else
-                dest[key] = value
-            end
-        end
-    end
+	local result: NestedDict<K, V> = {}
 
-    for _, tbl in ipairs({...}) do
-        merge(tbl, result)
-    end
+	local function merge(src: NestedDict<K, V>, dest: NestedDict<K, V>)
+		for key, value in pairs(src) do
+			if typeof(value) == "table" and typeof(dest[key]) == "table" then
+				merge(value :: NestedDict<K, V>, dest[key] :: NestedDict<K, V>)
+			elseif typeof(value) == "table" then
+				dest[key] = TableUtils.mergeDeep(value :: NestedDict<K, V>) :: V | NestedDict<K, V>
+			else
+				dest[key] = value
+			end
+		end
+	end
 
-    return result
+	for _, tbl in ipairs({ ... }) do
+		merge(tbl, result)
+	end
+
+	return result
 end
-
 
 --[=[
     Reduces an array to a single value based on a callback function and an initial value.
@@ -590,17 +591,21 @@ end
     print(sum) -- Output: 15
     ```
 ]=]
-function TableUtils.reduce<V, U>(array: Array<V>, callback: (accumulator: U, index: number, value: V) -> U, initialValue: U): U
-    if not isArray(array) then
-        error("TableUtils.reduce called on non-array")
-    end
+function TableUtils.reduce<V, U>(
+	array: Array<V>,
+	callback: (accumulator: U, index: number, value: V) -> U,
+	initialValue: U
+): U
+	if not isArray(array) then
+		error("TableUtils.reduce called on non-array")
+	end
 
-    local accumulator = initialValue
-    for index, value in ipairs(array) do
-        accumulator = callback(accumulator, index, value)
-    end
+	local accumulator = initialValue
+	for index, value in ipairs(array) do
+		accumulator = callback(accumulator, index, value)
+	end
 
-    return accumulator
+	return accumulator
 end
 
 --[=[
@@ -619,18 +624,18 @@ end
     ```
 ]=]
 function TableUtils.reverse<V>(array: Array<V>): Array<V>
-    if not isArray(array) then
-        error("TableUtils.reverse called on non-array")
-    end
+	if not isArray(array) then
+		error("TableUtils.reverse called on non-array")
+	end
 
-    local i, j = 1, #array
-    while i < j do
-        array[i], array[j] = array[j], array[i]
-        i = i + 1
-        j = j - 1
-    end
+	local i, j = 1, #array
+	while i < j do
+		array[i], array[j] = array[j], array[i]
+		i = i + 1
+		j = j - 1
+	end
 
-    return array
+	return array
 end
 
 --[=[
@@ -652,13 +657,13 @@ end
     ```
 ]=]
 function TableUtils.some<K, V>(tbl: Dictionary<K, V>, predicate: PredicateFunc<K, V>): boolean
-    assert(type(predicate) == "function", "Predicate must be a function")
-    for key, value in pairs(tbl) do
-        if predicate(key, value) then
-            return true
-        end
-    end
-    return false
+	assert(type(predicate) == "function", "Predicate must be a function")
+	for key, value in pairs(tbl) do
+		if predicate(key, value) then
+			return true
+		end
+	end
+	return false
 end
 
 --[=[
@@ -677,23 +682,22 @@ end
     ```
 ]=]
 function TableUtils.unique<V>(array: Array<V>): Array<V>
-    if not isArray(array) then
-        error("TableUtils.unique called on non-array")
-    end
+	if not isArray(array) then
+		error("TableUtils.unique called on non-array")
+	end
 
-    local result: Array<V> = {}
-    local seen: Dictionary<V, boolean> = {}
+	local result: Array<V> = {}
+	local seen: Dictionary<V, boolean> = {}
 
-    for _, value in ipairs(array) do
-        if not seen[value] then
-            seen[value] = true
-            table.insert(result, value)
-        end
-    end
+	for _, value in ipairs(array) do
+		if not seen[value] then
+			seen[value] = true
+			table.insert(result, value)
+		end
+	end
 
-    return result
+	return result
 end
-
 
 -- --[=[
 --     Merges multiple dictionaries into one.
@@ -744,10 +748,5 @@ end
 
 --     return result
 -- end
-
-
-
-
-
 
 return TableUtils

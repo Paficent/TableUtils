@@ -1,7 +1,7 @@
 [package]
 name = "paficent/tableutils"
 description = "Asynchronous programming primitives"
-version = "1.0.2"
+version = "1.0.3"
 license = "MIT"
 authors = ["Paficent"]
 
@@ -9,4 +9,4 @@ realm = "shared"
 registry = "https://github.com/upliftgames/wally-index"
 
 
-exclude = ["lune", "aftman.toml", "moonwave.toml", "README.MD"]
+exclude = [".github", "rokit.toml", "moonwave.toml", "README.MD", "LICENSE", "defaultproject.json",]
